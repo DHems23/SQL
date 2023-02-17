@@ -1,0 +1,24 @@
+--Create a snowboarding clothing database 
+CREATE TABLE snowboarding_clothing(id INTEGER PRIMARY KEY, name TEXT, gender TEXT, color TEXT, feature TEXT, price INTEGER);
+
+INSERT INTO snowboarding_clothing VALUES(1,"jacket","F","pink","insulated", 200.00);
+INSERT INTO snowboarding_clothing VALUES(2,"pants","F","gray","omni_heat",100.00);
+INSERT INTO snowboarding_clothing VALUES(3,'set','m','blue','base_layer',104);
+INSERT INTO snowboarding_clothing VALUES(4,'pants','m','black','omni_heat',120.0);
+INSERT INTO snowboarding_clothing VALUES(5,'socks','f','blue','wool',30);
+INSERT INTO snowboarding_clothing VALUES(6,'jacket','m','blue','triclimate',251);
+INSERT INTO snowboarding_clothing VALUES(7,'jacket','m','blue','fleece',146);
+INSERT INTO snowboarding_clothing VALUES(8,'pants','m','orange','gortex',259);
+INSERT INTO snowboarding_clothing VALUES(9,'gloves','m','blue','gortex',52);
+INSERT INTO snowboarding_clothing VALUES(10,'pants','f','pink','waterproof',269);
+INSERT INTO snowboarding_clothing VALUES(11,'jacket','f','multi_color','insulated',189);
+INSERT INTO snowboarding_clothing VALUES(12,'pants','m','blue','reversable',279);
+INSERT INTO snowboarding_clothing VALUES(13,'pants','m','gray','insulated',184);
+INSERT INTO snowboarding_clothing VALUES(14,'pants','m','gray','waterproof',150);
+INSERT INTO snowboarding_clothing VALUES(15,'jacket','m','brown','high_collar',400);
+
+--display the database ordered by price 
+SELECT * FROM snowboarding_clothing ORDER BY price;
+
+--what is the sum price of items by name 
+SELECT name, SUM(price) FROM snowboarding_clothing GROUP BY name  
